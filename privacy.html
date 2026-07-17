@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Video Generator</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="favicon.png" alt="Video Generator icon">
+      <a href="index.html">Video Generator</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <div class="legal">
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: July 12, 2025</em></p>
+
+    <p>Video Generator ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our application and website.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>When you use Video Generator, we may collect the following types of information:</p>
+    <ul>
+      <li><strong>TikTok Authentication Data:</strong> When you log in via TikTok, we receive an OAuth access token and your TikTok username, avatar, profile link, bio description, verification status, and public statistics (follower count, likes count, video count). We do not receive your password or email.</li>
+      <li><strong>TikTok Video Data:</strong> With your authorization, we read your public video list to help avoid duplicate content when generating new videos.</li>
+      <li><strong>Content You Provide:</strong> Subject descriptions, outfit lists, and style preferences you enter to generate video prompts.</li>
+      <li><strong>Generated Content:</strong> Video prompts, rendered media, and social media post text created by the app.</li>
+      <li><strong>Usage Data:</strong> Basic analytics such as which features are used and error logs, to improve the service.</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li><strong>Content Generation:</strong> Your input is used solely to generate video prompts, rendered media, and social posts.</li>
+      <li><strong>Publishing:</strong> With your authorization, generated content is published to your TikTok account via the Content Posting API. Video files are uploaded to TikTok's servers and published to your feed after your confirmation.</li>
+      <li><strong>Profile Display:</strong> Your TikTok profile information (username, avatar, stats) is displayed within the app to confirm which account is connected.</li>
+      <li><strong>Service Improvement:</strong> Aggregated, anonymized usage data helps us improve features and reliability.</li>
+      <li><strong>Authentication:</strong> Your TikTok access token is used only to authenticate API requests on your behalf and is stored securely.</li>
+    </ul>
+
+    <h2>3. Data Storage and Security</h2>
+    <ul>
+      <li>Access tokens are stored in encrypted environment variables and are never committed to source code or shared with third parties.</li>
+      <li>Generated media files are stored temporarily and automatically deleted after 24 hours.</li>
+      <li>All video rendering occurs in sandboxed Docker containers with resource limits and privilege isolation.</li>
+      <li>We do not store your TikTok credentials (username/password) at any point.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <ul>
+      <li><strong>TikTok API:</strong> Used for authentication (Login Kit), profile display (Display API), video listing, and content publishing (Content Posting API). We request the following scopes: <code>user.info.profile</code>, <code>user.info.stats</code>, <code>video.list</code>, <code>video.upload</code>, <code>video.publish</code>. Governed by <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener">TikTok's Privacy Policy</a>.</li>
+      <li><strong>LinkedIn API:</strong> Used for content publishing. Governed by <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">LinkedIn's Privacy Policy</a>.</li>
+      <li><strong>Instagram Graph API:</strong> Used for content publishing. Governed by <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta's Privacy Policy</a>.</li>
+      <li><strong>NVIDIA NIM:</strong> Used for AI image/video rendering. Prompts are sent to NVIDIA's cloud API for processing. Governed by <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-center/" target="_blank" rel="noopener">NVIDIA's Privacy Policy</a>.</li>
+      <li><strong>News API:</strong> Used to fetch trending headlines for the news-to-video pipeline.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li><strong>Access tokens:</strong> Retained until you revoke access or delete your account.</li>
+      <li><strong>Generated content:</strong> Automatically cleaned up after 24 hours.</li>
+      <li><strong>Usage logs:</strong> Retained for up to 90 days for debugging and improvement purposes.</li>
+    </ul>
+
+    <h2>6. Your Rights</h2>
+    <ul>
+      <li>You may revoke TikTok access at any time through your TikTok app settings.</li>
+      <li>You may request deletion of any data we hold about you by contacting us.</li>
+      <li>You may stop using the service at any time. Revoking access prevents future publishing but does not retroactively delete already-published content.</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Video Generator is not intended for users under the age of 13. We do not knowingly collect information from children under 13.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+    <h2>9. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, please contact us through the TikTok Developer Portal or via GitHub at <a href="https://github.com/sham435/video_generator0001" target="_blank" rel="noopener">github.com/sham435/video_generator0001</a>.</p>
+  </div>
+
+  <footer>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </p>
+    <p style="margin-top:0.5rem;">&copy; 2025 Video Generator. All rights reserved.</p>
+  </footer>
+</body>
+</html>

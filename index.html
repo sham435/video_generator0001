@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Generator - AI Content Pipeline</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="favicon.png" alt="Video Generator icon">
+      Video Generator
+    </div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#tiktok-integration">TikTok Integration</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>AI-Powered Content Pipeline</h1>
+    <p>Generate professional video prompts, render AI videos, and publish across TikTok, LinkedIn, and Instagram &mdash; all automatically.</p>
+    <a href="#how-it-works" class="cta">See How It Works</a>
+  </section>
+
+  <section id="features">
+    <h2>What Video Generator Does</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Smart Prompt Generation</h3>
+        <p>Enter a subject and outfit list. The AI generates structured video prompts with camera specs, lighting, transitions, and shot-by-shot storyboards &mdash; ready for any AI video model.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Multi-Style Social Posts</h3>
+        <p>From one prompt, automatically creates 7 social media post styles: casual swipe, high-energy grind, editorial thought-leadership, behind-the-scenes, results analytics, and carousel plans.</p>
+      </div>
+      <div class="feature-card">
+        <h3>AI Video Rendering</h3>
+        <p>Renders videos using NVIDIA NIM cloud AI (FLUX.1-dev for images, with video model support). No local GPU required &mdash; runs entirely in the cloud.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Automated Publishing</h3>
+        <p>One-click publish to TikTok, LinkedIn, and Instagram. The pipeline handles formatting, media attachment, and scheduling via n8n workflow automation.</p>
+      </div>
+      <div class="feature-card">
+        <h3>News-to-Video Pipeline</h3>
+        <p>Automatically fetches trending headlines every 30 minutes, generates video prompts and social posts for each, and publishes them &mdash; fully hands-free.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Sandboxed Execution</h3>
+        <p>All video rendering runs in isolated Docker containers with resource limits, privilege drops, and automatic cleanup &mdash; secure by design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>1. Describe Your Content</h3>
+        <p>Tell the app who or what the video is about, choose outfits/scenes, and select a post style. The AI generates a complete content package.</p>
+      </div>
+      <div class="feature-card">
+        <h3>2. Render with AI</h3>
+        <p>The prompt is sent to NVIDIA's cloud AI models to generate high-quality images or videos. Each render produces a vertical 9:16 format optimized for mobile.</p>
+      </div>
+      <div class="feature-card">
+        <h3>3. Publish Everywhere</h3>
+        <p>Generated content and media are published simultaneously to TikTok, LinkedIn, and Instagram through secure API integrations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiktok-integration">
+    <h2>TikTok Integration</h2>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:1.5rem;">Video Generator uses the following TikTok products and API scopes:</p>
+
+    <h3 style="margin-bottom:1rem;">Products Used</h3>
+    <div class="scopes" style="margin-bottom:2rem;">
+      <div class="scope-item">
+        <h4>Login Kit</h4>
+        <p>Used for secure user authentication. When a user taps "Login with TikTok," they authorize the app via TikTok's OAuth flow. This grants the app an access token used to call other TikTok APIs on the user's behalf.</p>
+      </div>
+      <div class="scope-item">
+        <h4>Content Posting API</h4>
+        <p>Used to upload and publish AI-generated videos directly to the user's TikTok feed. The app renders a video, uploads it to TikTok's servers, and the user confirms before it goes live.</p>
+      </div>
+      <div class="scope-item">
+        <h4>Display API</h4>
+        <p>Used to read the user's profile information and display it within the app, confirming which TikTok account is connected.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:1rem;">Scope Details</h3>
+    <div class="scopes">
+      <div class="scope-item">
+        <h4>user.info.profile</h4>
+        <p>Read access to the user's profile information including profile_web_link, profile_deep_link, bio_description, and is_verified. Used to display the connected TikTok account's name and avatar within the app interface, so the user can confirm which account will receive published content.</p>
+      </div>
+      <div class="scope-item">
+        <h4>user.info.stats</h4>
+        <p>Read access to a user's public statistics such as likes count, follower count, following count, and video count. Used to display account analytics within the app, helping users understand their audience reach before publishing content.</p>
+      </div>
+      <div class="scope-item">
+        <h4>video.list</h4>
+        <p>Read a user's public videos on TikTok. Used within the app to display the user's existing video library, allowing them to reference previous content when generating new videos and avoid duplicate topics.</p>
+      </div>
+      <div class="scope-item">
+        <h4>video.upload</h4>
+        <p>Upload video files to TikTok's servers. After the AI renders a video using NVIDIA's cloud, the app uploads the resulting video file to TikTok via the Content Posting API. The video is stored temporarily on TikTok's servers pending the user's publish confirmation.</p>
+      </div>
+      <div class="scope-item">
+        <h4>video.publish</h4>
+        <p>Publish an uploaded video to the user's TikTok feed. After upload, the user reviews and confirms the video within the app, and this scope finalizes the publishing action. The video then appears on the user's TikTok profile and in their followers' feeds.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </p>
+    <p style="margin-top:0.5rem;">&copy; 2025 Video Generator. All rights reserved.</p>
+  </footer>
+</body>
+</html>
